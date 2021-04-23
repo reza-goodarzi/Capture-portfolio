@@ -7,6 +7,11 @@ const GlobalStyle = createGlobalStyle`
 		box-sizing: border-box;
 	}
 
+	html{
+		font-size: 80%;
+		font-family: 'inter', sans-serif;
+	}
+
 	body{
 		background: #1b1b1b;
 	}
@@ -28,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
 
 	h2{
 		font-weight: lighter;
-		font-size: 2.5rem;
+		font-size: 4rem;
 	}
 
 	h3{
@@ -51,7 +56,7 @@ const GlobalStyle = createGlobalStyle`
 	p{
 		padding: 3rem 0rem;
 		color: #ccc;
-		font-size: 1.3rem;
+		font-size: 1.2rem;
 		line-height: 150%;
 	}
 `;

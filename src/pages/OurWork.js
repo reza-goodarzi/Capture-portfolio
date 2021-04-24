@@ -1,20 +1,25 @@
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // Images
 import athlete from '../img/athlete-small.png';
 import theRacer from '../img/theracer-small.png';
 import goodTimes from '../img/goodtimes-small.png';
 
+// Animation
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../animation';
+
 
 const OurWork = () => {
 	return (
-		<Work>
+		<Work
+			variants={pageAnimation} initial='hidden' animate="show" exit="exit" style={{ background: '#fff' }} >
 			<Movie>
 				<h2>Athlete</h2>
 				<div className="line"></div>
 				<Link to="/work/the-athlete">
-					<img src={athlete} alt="athlete"/>
+					<img src={athlete} alt="athlete" />
 				</Link>
 			</Movie>
 
@@ -37,7 +42,7 @@ const OurWork = () => {
 	)
 };
 
-const Work = styled.div`
+const Work = styled(motion.div)`
 	min-height: 100vh;
 	overflow: hidden;
 	padding: 5rem 10rem;

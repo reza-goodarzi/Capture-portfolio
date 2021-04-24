@@ -57,7 +57,8 @@ const Movie = styled.div`
 
 	img{
 		width: 100%;
-		height: 70vh
+		height: 70vh;
+		object-fit: cover;
 	}
 
 `;

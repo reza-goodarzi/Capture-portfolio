@@ -43,7 +43,6 @@ const Work = styled.div`
 	padding: 5rem 10rem;
 	h2{
 		padding: 1rem 0;
-		color: #ccc;
 	}
 `;
 

@@ -1,11 +1,16 @@
+import { motion } from "framer-motion";
 import { useState } from "react";
 
-const Toggle = ({ children }) => {
+const Toggle = ({ children, title }) => {
 	const [toggle, setToggle] = useState(true);
 	return (
-		<div onClick={() => setToggle(!toggle)}>
+		<motion.div layout className="question" onClick={() => setToggle(!toggle)}>
+			<motion.h4 layout style={{ cursor: 'pointer' }} >
+				{title}
+			</motion.h4>
 			{toggle && children}
-		</div>
+			<div className="faq-line"></div>
+		</motion.div>
 	);
 }
 

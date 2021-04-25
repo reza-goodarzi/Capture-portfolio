@@ -10,10 +10,19 @@ const GlobalStyle = createGlobalStyle`
 	html{
 		font-size: 80%;
 		font-family: 'inter', sans-serif;
+
+		@media (max-width: 1500px){
+			font-size: 60%;
+		}
+
+		@media (max-width: 1300px){
+			
+		}
 	}
 
 	body{
 		background: #1b1b1b;
+		overflow-x: hidden;
 	}
 
 	button {

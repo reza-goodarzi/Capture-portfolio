@@ -41,7 +41,6 @@ function App() {
           </Route>
         </Switch>
       </AnimatePresence>
-
     </div>
   );
 }

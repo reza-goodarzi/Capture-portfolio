@@ -1,13 +1,16 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 import { About } from '../styles'
 import Toggle from './Toggle';
 import { AnimateSharedLayout } from 'framer-motion';
 
+// Scroll
+import { useScroll } from './useScroll';
+import { scrollReveal } from '../animation';
+
 const FaqSection = () => {
-	const [faqToggle, setFaqToggle] = useState(false);
+	const [element, controls] = useScroll();
 	return (
-		<Faq>
+		<Faq variants={scrollReveal} animate={controls} initial='hidden'  ref={element} >
 			<h2>Any Questions <span>FAQ</span></h2>
 			<AnimateSharedLayout  >
 				<Toggle title='How DO I Start?'>
@@ -32,7 +35,6 @@ const FaqSection = () => {
 				</Toggle>
 
 				<Toggle title='What Product Do You Offer?'>
-					<h4></h4>
 					<div className="answer">
 						<p>Lorem ipsum dolor sit amet.</p>
 						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, error.</p>
